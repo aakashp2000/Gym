@@ -1,21 +1,18 @@
 e=int(input())
 n=int(input())
-a=[]
-for i in range(0, n):
-   ele = int(input())
-   a.append(ele)
-a.sort()
-c=0
+arr=[]
+for i in range(0,n):
+    ele=int(input())
+    arr.append(ele)
+    arr.sort()
+    ans=0
 for i in range(n-1,-1,-1):
-   mini=0
-   while(e>0 and mini<2):
-       e=e-a[i]
-       mini+=1
-       c+=1
-if(e<=0):
-   print(c)
-
+    mini=0
+    while(e>0 and mini<2):
+        e=e-arr[i]
+        mini+=1
+        ans+=1
+if e<=0:
+    print(ans)
 else:
-
-   print(-1)
-
+    print("-1")
